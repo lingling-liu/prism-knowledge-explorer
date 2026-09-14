@@ -1,0 +1,17 @@
+.card-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.card-image {
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.card-image:focus-visible {
+  outline: 3px solid #2b8b7f;
+  outline-offset: -3px;
+}

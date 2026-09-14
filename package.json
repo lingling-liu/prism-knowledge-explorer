@@ -1,0 +1,11 @@
+{
+  "name": "prism-data-knowledge-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static PRISM Data & Knowledge Explorer for GitHub Pages",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/validate.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}
