@@ -10,7 +10,7 @@ fs.writeFileSync(path.join(root, 'data.js'), `const PRISM_DATA = ${JSON.stringif
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 
-for (const file of ['index.html', 'styles.css', 'card-overrides.css', 'app.js', 'data.js']) {
+for (const file of ['index.html', 'styles.css', 'card-overrides.css', 'translation.css', 'translation.js', 'app.js', 'data.js']) {
   fs.copyFileSync(path.join(root, file), path.join(out, file));
 }
 fs.cpSync(path.join(root, 'thumbnails'), path.join(out, 'thumbnails'), { recursive: true });

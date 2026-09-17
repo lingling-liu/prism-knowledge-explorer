@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="card-overrides.css">
+  <link rel="stylesheet" href="translation.css">
 </head>
 <body>
   <header class="topbar">
@@ -18,7 +19,15 @@
       <span class="brand-mark" aria-hidden="true"><span></span></span>
       <span><b>PRISM</b><small>Data & Knowledge Explorer</small></span>
     </a>
-    <button class="about-button" id="aboutButton" type="button">About this explorer</button>
+    <div class="header-actions">
+      <label class="translate-control notranslate" translate="no" for="languageSelect"><span>Translate</span>
+        <select id="languageSelect" aria-label="Translate this webpage">
+          <option value="en">English</option>
+        </select>
+      </label>
+      <div id="google_translate_element" class="google-translate-host" aria-hidden="true"></div>
+      <button class="about-button" id="aboutButton" type="button">About this explorer</button>
+    </div>
   </header>
 
   <main>
@@ -48,7 +57,7 @@
 
       <section class="results" aria-live="polite">
         <div class="results-toolbar">
-          <div><strong id="resultCount">498 resources</strong><span id="resultSummary">Showing all resources</span></div>
+          <div><strong id="resultCount"><span id="resultNumber">498</span> <span id="resultPlural">resources</span><span id="resultSingular" hidden>resource</span></strong><span id="resultSummary"><span id="summaryAll">Showing all resources</span><span id="summaryMatching" hidden>Matching your current filters</span></span></div>
           <button class="mobile-filter" id="mobileFilterButton" type="button" aria-expanded="false" aria-controls="filtersPanel">Filters</button>
           <label class="sort-control">Sort
             <select id="sortSelect"><option value="recommended">Featured</option><option value="az">Title A–Z</option><option value="source">Source A–Z</option></select>
@@ -73,5 +82,7 @@
   <div class="backdrop" id="mobileBackdrop"></div>
   <script src="data.js"></script>
   <script src="app.js"></script>
+  <script src="translation.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=prismGoogleTranslateInit" async></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ const checks = {
   encodingErrors: encodingErrors.length,
   absoluteLocalPaths,
   clickableThumbnails: app.includes('<a class="card-image"'),
-  tagsBeforeThumbnail: app.includes('<article class="resource-card"><div class="card-meta"'),
+  tagsBeforeThumbnail: app.indexOf('class="card-meta"') < app.indexOf('class="card-image"'),
   unepThumbnail: target?.thumbnail === 'thumbnails/unep-land-based-pollution.jpg',
   utf8: html.includes('<meta charset="utf-8">')
 };
