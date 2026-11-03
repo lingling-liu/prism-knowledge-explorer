@@ -17,8 +17,7 @@
     language=value||"en";select.value=language;localStorage.setItem(KEY,language);document.documentElement.lang=language;
     if(language==="en"){
       document.cookie="googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-      document.cookie="googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain="+location.hostname;
-      document.cookie="googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path="+location.pathname.replace(/[^/]*$/,"");
+      document.cookie="googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.chatgpt.site";
       location.reload();return;
     }
     const control=combo();if(!control){setTimeout(()=>choose(language),250);return}

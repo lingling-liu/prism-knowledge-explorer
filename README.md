@@ -1,6 +1,6 @@
 # PRISM Data & Knowledge Explorer
 
-Editable export of the existing Site's version 6, source revision `af519b9fed336646fb488076ffd8a654d69c457e`, exported September 16, 2026. This is recovered application source, not a recreation. The live Site was not modified.
+Editable export of the existing Site's version 13, source revision `b4fafb991784bfdb0534d63dfbc253b2998a0bce`, exported November 3, 2026. This is recovered application source, not a recreation. The live Site was not modified.
 
 ## Upload and enable GitHub Pages
 
@@ -26,9 +26,9 @@ Preview at `http://127.0.0.1:4173`. Build output is `_site/`; GitHub Actions bui
 
 ## Update resources and thumbnails
 
-`data/resources.json` is the canonical editable resource dataset. All 498 records and every recovered field are retained, including two blank rows already present in the original. Preserve IDs and edit names, descriptions, locations, pollution types, themes, types, sources, links and metadata as needed. Save as UTF-8. `npm run build` regenerates `data.js` and copies the application into `_site`. Commit the edited JSON and generated `data.js`; push to redeploy. Filter options are generated from the dataset.
+`data/resources.json` is the canonical editable resource dataset. All 513 records and every recovered field are retained, including two blank rows already present in the original. Preserve IDs and edit names, descriptions, locations, pollution types, themes, types, sources, links and metadata as needed. Save as UTF-8. `npm run build` regenerates `data.js` and copies the application into `_site`. Commit the edited JSON and generated `data.js`; push to redeploy. Filter options are generated from the dataset.
 
-Place replacement images in `thumbnails/`. Set a resource's `thumbnail` to a relative path such as `thumbnails/my-report.jpg`, and give `thumbnailAlt` a descriptive value. The manually replaced UNEP screenshot is included as `thumbnails/unep-land-based-pollution.jpg`. Preserve image proportions and existing card styling. Rebuild, test, commit and push. All existing thumbnail assets, including local category fallback graphics, are bundled.
+Manual thumbnail provenance and locks are recorded in `tools/thumbnail-registry.json`; preserve entries marked `manual` and `locked`. Place replacement images in `thumbnails/`. Set a resource's `thumbnail` to a relative path such as `thumbnails/my-report.jpg`, and give `thumbnailAlt` a descriptive value. The manually replaced UNEP screenshot is included as `thumbnails/unep-land-based-pollution.jpg`. Preserve image proportions and existing card styling. Rebuild, test, commit and push. All existing thumbnail assets, including local category fallback graphics, are bundled.
 
 `scripts/recover-data.mjs` is an optional import utility: it extracts records from `data.js` into JSON. Do not run it after editing JSON unless you intentionally want to replace JSON with the JavaScript dataset.
 
